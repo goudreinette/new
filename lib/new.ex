@@ -1,5 +1,10 @@
 defmodule New do
   import System
+  import Enum, only: [at: 2]
+
+  def main(args) do
+    scaffold(at(args, 0), at(args, 1))
+  end
 
   def scaffold(template, target) do
     copy_template(template, target)
@@ -19,16 +24,15 @@ defmodule New do
   end
 
   def replace_name!(path, name) do
-    DirWalker.stream(path)
+    DirWalker.stream(target_path(path))
     |> Enum.map(&replace_name(&1, name))
   end
 
   def replace_name(path, name) do
     content = File.read!(path)
-    newcontent = String.replace(content, "${name}", name)
-    IO.inspect([path, content, newcontent])
-    File.write!(path, newcontent)
+              |> String.replace("${name}", name)
+
+    IO.inspect([path, content])
+    File.write!(path, content)
   end
 end
-
-New.scaffold("elm", "mytest")
