@@ -1,6 +1,6 @@
 defmodule New do
   import System
-  import Enum, only: [at: 2]
+  import Enum, only: [at: 2, join: 2, map: 2]
 
   def main(args) do
     scaffold(at(args, 0), at(args, 1))
@@ -29,10 +29,32 @@ defmodule New do
   end
 
   def replace_name(path, name) do
-    content = File.read!(path)
-              |> String.replace("${name}", name)
+    content = EEx.eval_file(path, bindings(name))
 
     IO.inspect([path, content])
     File.write!(path, content)
+  end
+
+  def bindings(name) do
+    [name: name,
+     title: title_case(name)
+    ]
+  end
+
+  def title_case(string) do
+    string
+    |> capitalize_parts
+    |> join(" ")
+  end
+
+  def pascal_case(string) do
+    string
+    |> capitalize_parts
+    |> join("")
+  end
+
+  def capitalize_parts(string) do
+    String.split(string, "-")
+    |> map(&String.capitalize/1)
   end
 end

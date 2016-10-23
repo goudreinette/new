@@ -1,0 +1,16 @@
+{
+    "name": "reinvdwoerd/<%= name %>",
+    "version": "1.0",
+    "authors": [
+        {
+            "name": "reinvdwoerd",
+            "email": "reinvanderwoerd@me.com"
+        }
+    ],
+    "require": {
+
+    },
+    "autoload": {
+        "psr-4": {"<%= pascal %>\\": "source/"}
+    }
+}
