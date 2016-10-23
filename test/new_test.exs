@@ -12,15 +12,15 @@ defmodule NewTest do
     assert New.target_path("myapp") == expected
   end
 
-  # test "replace_name replaces ${name} with the given string" do
-  #   input    = "<?php namespace ${name};"
-  #   expected = "<?php namespace myapp;"
-  #   assert New.replace_name(input, "myapp") == expected
-  # end
-
   test "pascal_case returns the pascalcased version of a string" do
     input = "checkout-field-editor"
     expected = "CheckoutFieldEditor"
     assert New.pascal_case(input) == expected
+  end
+
+  test "title_case returns the titlecased version of a string" do
+    input = "checkout-field-editor"
+    expected = "Checkout Field Editor"
+    assert New.title_case(input) == expected
   end
 end
