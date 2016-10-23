@@ -10,6 +10,8 @@ defmodule New do
   def scaffold(template, target) do
     copy_template(template, target)
     replace_name!(target, target)
+
+    IO.puts "Created new project '#{target}'"
   end
 
   def copy_template(template, target) do
@@ -34,7 +36,6 @@ defmodule New do
     content = EEx.eval_file(path, bindings(name))
     newpath = replace_path(path, bindings(name))
 
-    IO.inspect([newpath, content])
     File.rm_rf(path)
     File.write!(newpath, content)
   end
