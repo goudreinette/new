@@ -63,6 +63,7 @@ defmodule New do
     |> join("")
   end
 
+
   def capitalize_parts(string) do
     string
     |> String.split(["-", "_"])
