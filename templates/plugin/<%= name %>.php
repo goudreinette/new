@@ -13,11 +13,12 @@ Text Domain: <%= name %>
 
 require __DIR__ . '/vendor/autoload.php';
 
+use Utils\View;
 
 /**
  * Dependencies
  */
-$root   = dirname(plugin_basename(__FILE__));
+$root   = plugin_dir_url(__FILE__);
 $view   = new View($root);
 
 /**
@@ -28,5 +29,5 @@ $view   = new View($root);
  * Translations
  */
 add_action('plugins_loaded', function () {
-    load_plugin_textdomain('<%= name %>', false, $root);
+    load_plugin_textdomain('<%= name %>', false, dirname(plugin_basename(__FILE__)));
 });
