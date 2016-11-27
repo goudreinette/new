@@ -8,6 +8,7 @@ Version: 1.0
 Author: reinvdwoerd
 Author URI: reinvdwoerd.herokuapp.com
 License: -
+Text Domain: <%= name %>
 */
 
 require __DIR__ . '/vendor/autoload.php';
