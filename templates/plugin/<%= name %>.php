@@ -17,7 +17,7 @@ require __DIR__ . '/vendor/autoload.php';
 /**
  * Dependencies
  */
-$root   = dirname(plugin_basename(__FILE__);
+$root   = dirname(plugin_basename(__FILE__));
 $view   = new View($root);
 
 /**

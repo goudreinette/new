@@ -8,7 +8,8 @@
         }
     ],
     "require": {
-        "reinvdwoerd/utils": "*",
+        "mustache/mustache": "2.*.*",
+        "reinvdwoerd/utils": "@dev-master",
         "tightenco/collect": "5.3.*"
     },
     "autoload": {
