@@ -11,19 +11,38 @@ License: -
 Text Domain: <%= name %>
 */
 
-require __DIR__ . '/vendor/autoload.php';
+/**
+ * Directory
+ */
+$root = plugin_dir_url(__FILE__);
+$path = plugin_dir_path(__FILE__);
 
-use Utils\View;
 
 /**
- * Dependencies
+ * Autoload
  */
-$root   = plugin_dir_url(__FILE__);
+require __DIR__ . '/vendor/autoload.php';
+foreach (glob("$path/source/*.php") as $file) {
+    require_once $file;
+}
+
+/**
+ * View
+ */
+use Utils\View;
 $view   = new View($root);
 
+
 /**
- * Initialize
+ * Run on init
  */
+ add_action('init', function () {
+
+ });
+
+ add_action('admin_init', function () {
+
+ });
 
 /**
  * Translations
