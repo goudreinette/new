@@ -9,7 +9,7 @@
     ],
     "require": {
         "mustache/mustache": "2.*.*",
-        "reinvdwoerd/utils": "@dev",
+        "reinvdwoerd/utils": "dev-master",
         "tightenco/collect": "5.3.*"
     },
     "autoload": {
