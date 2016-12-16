@@ -10,7 +10,6 @@
     "require": {
         "mustache/mustache": "2.*.*",
         "reinvdwoerd/utils": "dev-master",
-        "tightenco/collect": "5.3.*"
     },
     "autoload": {
         "psr-4": {"<%= pascal %>\\": "source/"}
