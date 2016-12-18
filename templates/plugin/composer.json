@@ -9,7 +9,7 @@
     ],
     "require": {
         "mustache/mustache": "2.*.*",
-        "reinvdwoerd/utils": "dev-master",
+        "reinvdwoerd/utils": "dev-master"
     },
     "autoload": {
         "psr-4": {"<%= pascal %>\\": "source/"}
