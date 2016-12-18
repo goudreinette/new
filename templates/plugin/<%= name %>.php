@@ -22,9 +22,7 @@ $path = plugin_dir_path(__FILE__);
  * Autoload
  */
 require __DIR__ . '/vendor/autoload.php';
-foreach (glob("$path/source/*.php") as $file) {
-    require_once $file;
-}
+
 
 /**
  * View
