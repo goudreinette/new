@@ -11,12 +11,6 @@ License: -
 Text Domain: <%= name %>
 */
 
-/**
- * Directory
- */
-$root = plugin_dir_url(__FILE__);
-$path = plugin_dir_path(__FILE__);
-
 
 /**
  * Autoload
@@ -24,27 +18,9 @@ $path = plugin_dir_path(__FILE__);
 require __DIR__ . '/vendor/autoload.php';
 
 
-/**
- * View
- */
-use Utils\View;
-$view   = new View($root);
+class <%= pascal %> extends PluginContext
+{
+    static $base = "<%= name %>"
+}
 
-
-/**
- * Run on init
- */
- add_action('init', function () {
-
- });
-
- add_action('admin_init', function () {
-
- });
-
-/**
- * Translations
- */
-add_action('plugins_loaded', function () {
-    load_plugin_textdomain('<%= name %>', false, dirname(plugin_basename(__FILE__)));
-});
+new <%= pascal %>();
