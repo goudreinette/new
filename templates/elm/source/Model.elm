@@ -1,7 +1,6 @@
 module Model exposing (..)
 
 
-type Model = String
+type alias Model = String
 
 initModel = ""
-
