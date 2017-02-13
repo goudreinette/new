@@ -1,0 +1,5 @@
+target/
+figwheel_server.log
+public/cljs/
+.nrepl-port
+.lein-repl-history

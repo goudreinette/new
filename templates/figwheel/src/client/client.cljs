@@ -1,4 +1,4 @@
-(ns <%= name %>.core
+(ns <%= name %>.client
   (:require [reagent.core :as r]))
 
 (def model (r/atom 0))

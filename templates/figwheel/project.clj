@@ -3,13 +3,15 @@
                  [org.clojure/clojurescript "1.9.229"]
                  [reagent "0.6.0"]]
   :plugins [[lein-figwheel "0.5.8"]]
+  :source-paths ["src/server" "src/shared"]
+  :main <%= name %>.server
   :clean-targets [:target-path "out"]
   :cljsbuild
   { :builds [{:id "dev"
-              :source-paths ["src"]
+              :source-paths ["src/client" "src/shared"]
               :figwheel true
               :compiler
-                {:main "<%= name %>.core"
+                {:main "<%= name %>.client"
                  :asset-path "cljs/out"
                  :output-to  "public/cljs/main.js"
                  :output-dir "public/cljs/out"}}]}
