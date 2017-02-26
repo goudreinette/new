@@ -5,7 +5,8 @@
      [http-kit "2.2.0"]
      [compojure "1.5.1"]
      [org.clojure/core.match "0.3.0-alpha4"]
-     [org.clojure/core.incubator "0.1.4"]]
+     [org.clojure/core.incubator "0.1.4"]
+     [prismatic/schema "1.1.3"]]
   :main <%= name %>
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}
