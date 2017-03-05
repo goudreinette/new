@@ -4,12 +4,12 @@
                  [reagent "0.6.0"]
                  [prismatic/schema "1.1.3"]]
   :plugins [[lein-figwheel "0.5.8"]]
-  :source-paths ["src/server" "src/domain"]
-  :main <%= name %>.server
+  :source-paths ["src"]
+  :main  <%= name %>.server
   :clean-targets [:target-path "out"]
   :cljsbuild
   { :builds [{:id "dev"
-              :source-paths ["src/client" "src/domain"]
+              :source-paths ["src"]
               :figwheel true
               :compiler
                 {:main "<%= name %>.client"

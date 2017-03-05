@@ -1,5 +1,6 @@
 (ns <%= name %>.client
-  (:require [reagent.core :as r]))
+  (:require [reagent.core :as r]
+            [<%= name %> :refer :all]))
 
 (def model (r/atom 0))
 
